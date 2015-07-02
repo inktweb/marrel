@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<link rel="stylesheet" href="css/marrel.css">
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="../marrel.css"> <!-- latest build -->
+
+<link rel="stylesheet" href="assets/prism.css">
+<script src="assets/prism.js"></script>
 </head>
 <body>
 
 <div class="container">
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-4">
+        <ul class="menu-vertical">
+            <li><a href="grid.php">Grid</a></li>
+            <li><a href="typography.php">Typography</a></li>
+            <li><a href="tables.php">Tables</a></li>
+            <li><a href="buttons.php">Buttons</a></li>
+            <li><a href="forms.php">Forms</a></li>
+            <li><a href="navigation.php">Navigation</a></li>
+            <li><a href="misc.php">Misc</a></li>
+        </ul>
+    </div>
+    <div class="col-md-8">
         <h1>Forms</h1>
 
-        <p>By default forms are inline.</p>
+        <p>By default forms are inline with auto width.</p>
+        
         <form>
           <label for="search">Search</label>
           <input id="search" type="text" class="field-light" placeholder="Search for product...">
           <button class="btn">Go!</button>
+        </form>
+
+        <p>They also play nice with buttons.</p>
+
+        <form>
+            <input type="text" value="1">
+            <input type="submit" class="btn btn-primary" value="Plaats in mandje">
         </form>
 
         <hr>
@@ -91,6 +115,14 @@
                 Remember me 
             </label>
             <div class="col-sm-2 col-sm-offset-10"><input type="submit" value="Login" class="btn btn-primary"></div>
+        </form>
+
+        <p>Wrap your rows around a <code>col</code> first to offset the negative margin.</p>
+        <form class="form-horizontal">
+            <div class="col-xs-12">
+                <input type="text" value="1" class="col-xs-2">
+                <input type="submit" class="btn btn-primary col-xs-9 col-xs-offset-1" value="Plaats in mandje">
+            </div>
         </form>
 
         <h2>Helping classes</h2>

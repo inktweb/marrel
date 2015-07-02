@@ -1,7 +1,15 @@
 /*!
  * Marrel.css pre-release
  * Licensed under MIT
- */
+ *
+ * 
+ * Bootstrip - Bootstrap with only the Grid and Responsive components.
+ * Bootstrap v3.3.4 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ *
+ * normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
+*/
 @import "bootstrip.scss";
 @import "normalize.scss";
 
@@ -21,6 +29,16 @@ body {
     letter-spacing: 0.01em;
     font-size: 100%;
     color: $text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0 0 1em 0;
 }
 
 h1 {
@@ -49,7 +67,6 @@ h6 {
 
 p {
     line-height: 1.5;
-    margin: 0 0 1em 0;
 }
 
 a {
@@ -195,6 +212,7 @@ form .success {
     text-decoration: none;
     padding: 8px 16px !important;
     display: inline-block;
+    line-height: inherit !important;
 
     border: 1px solid rgba(0, 0, 0, 0.125);
     background-color: #f8f8f8;
@@ -431,10 +449,6 @@ th {
         display: block;
         width:100%;
 
-        &.active {
-            
-        }
-
         & a {
             text-align: center;
             display: block;
@@ -598,4 +612,12 @@ th {
 
 .pull-right {
     float: right;
+}
+
+.remove-margin {
+    margin: 0 !important;
+}
+
+.remove-padding {
+    padding: 0 !important;
 }
