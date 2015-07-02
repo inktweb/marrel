@@ -1,0 +1,601 @@
+/*!
+ * Marrel.css pre-release
+ * Licensed under MIT
+ */
+@import "bootstrip.scss";
+@import "normalize.scss";
+
+$text: #212121;            // light black
+$greyscale1: #f5f5f5;   // light grey
+$greyscale2: #eee;      // dark
+$greyscale3: #e0e0e0;   // darker
+$primary: #00b900;      // green
+$secondary: #009;       // blue;
+$tertiary: #e43e94;     // magenta;
+
+/* === TYPOGRAPHY === */
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    font-size: 100%;
+    color: $text;
+}
+
+h1 {
+    font-size: 2em; /* 2*16 = 32 */
+}
+
+h2 {
+    font-size: 1.5em; /* 1.5*16 = 24 */
+}
+
+h3 {
+    font-size: 1.17em; /* 1.17*16 = 18.72 */
+}
+
+h4 {
+    font-size: 1em; /* 1*16 = 16 */
+}
+
+h5 {
+    font-size: 0.83em; /* 0.83*16 = 13.28 */
+}
+
+h6 {
+    font-size: 0.75em; /* 0.75*16 = 12 */
+}
+
+p {
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+}
+
+a {
+  color: #265C83;
+}
+
+a:link,
+a:visited {
+    color: #265C83;
+}
+
+a:hover {
+    color: #7FDBFF;
+}
+
+a:active {
+  color: #007BE6;
+}
+
+dt {
+    font-weight: bold;
+}
+
+code,
+pre,
+kbd {
+    padding: 1px 5px;
+    white-space: pre-wrap;
+    background-color: $greyscale1;
+    font-family: Courier New, Courier, monospace, sans-serif;
+}
+
+blockquote {
+    margin-left: 0;
+    padding-left: 5px;
+    border-left: 5px solid $greyscale1;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid $greyscale1;
+}
+
+/* === RESPONSIVE === */
+img, 
+canvas, 
+iframe, 
+video, 
+svg, 
+select, 
+textarea { 
+  max-width: 100%; 
+  height: auto;
+  display: block;
+}
+
+/* === FORMS === */
+input,
+select,
+textarea {
+    padding: 3px 5px !important;
+    border: 1px solid $greyscale3;
+    border-radius: 2px;
+    margin: 0 0 1em 0;
+}
+
+input {
+    // for proper alignment with button padding
+    padding: 8+3px 5px !important;
+}
+
+label {
+    font-weight: bold;
+    padding-top:6px;
+}
+
+.form-full {
+    width: 100%;
+    
+    input,
+    select,
+    label,
+    textarea {
+        width: 100%;
+        display: block;
+    }
+
+}
+ 
+.form-full label input {
+    width: auto;
+    display: inline-block;
+}
+
+.form-horizontal {
+    width: 100%;
+    margin-right: -15px;
+    margin-left: -15px;
+    
+    input,
+    select,
+    textarea {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    label input[type="radio"] {
+        margin-right: 3px;
+        margin-left: -15px;
+    }
+    
+}
+
+.form-horizontal:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+form .required {
+    float: right;
+    color: red;
+}
+
+form .help {
+    color: #ccc;
+    padding-top: 6px;
+}
+
+form .error {
+    border: 1px solid red;
+}
+
+form .success {
+    border: 1px solid green;
+}
+
+/* === BUTTONS === */
+.btn {
+
+    text-decoration: none;
+    padding: 8px 16px !important;
+    display: inline-block;
+
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    background-color: #f8f8f8;
+    color: #444 !important;
+
+    &:hover {
+        /* darken border */
+        border: 1px solid rgba(0, 0, 0, 0.250);
+    }
+
+    &:active {
+        /* shadow inside button */
+        -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+        box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+    }
+
+}
+
+.btn-primary {
+    background-color: $primary;
+    color: #fff !important;
+
+    &:hover {
+        background: darken($primary, 10%);
+    }
+}
+
+.btn-secondary {
+    background-color: $secondary;
+    color: #fff !important;
+
+    &:hover {
+        background: darken($secondary, 10%);
+    }
+
+}
+
+.btn-tertiary {
+    background-color: $tertiary;
+    color: #fff !important;
+
+    &:hover {
+        background: darken($tertiary, 10%);
+    }
+}
+
+.btn-outline {
+    background-color: #fff; 
+    color: #444 !important;
+    border: 1px solid $greyscale1;
+}
+
+.btn-disabled {
+    color: $greyscale2 !important;
+    text-decoration: line-through;
+}
+
+/* === TABLES === */
+table {
+    width: 100%;
+    border:1px solid $greyscale1;
+    margin: 0 0 1em 0;
+    table-layout: fixed;
+
+    &.table-borderless  {
+        border: 1px rgba(0, 0, 0, 0);
+
+        td,
+        th {
+            border: 0;
+        }
+    }
+
+    &.table-bordered  {
+        border: 1px solid $greyscale1;
+
+        td,
+        th {
+            border: 1px solid $greyscale1;
+        }
+    }
+
+    &.table-striped  {
+
+        tr:nth-child(even) {
+            background: $greyscale1;
+        }
+    }
+}
+
+td,
+th {
+    border-bottom:1px solid $greyscale1;
+    padding: 3px 5px;
+}
+
+th {
+    background: $greyscale2;
+    text-align: left;
+}
+
+/* === NAVIGATION === */
+.tabs {
+    padding: 0;
+    width: 100%;
+    display: table;
+
+     & li {
+        display: table-cell;
+        border-bottom: 1px solid $greyscale3;
+        margin-right: -6px;
+        text-align: center;
+
+        &.active {
+
+            border: 1px solid $greyscale3;
+            border-radius: 2px;
+            border-bottom: 0px solid rgba(0, 0, 0, 0);
+
+            & a {
+                color: $text !important;
+                text-decoration: none;
+            }
+        }
+
+        & a {
+            padding: 8px 16px;
+            display: block;
+        }
+     }
+}
+
+.menu {
+    padding: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    display: table;
+
+    & li {
+        display: table-cell;
+
+        &.active {
+            
+        }
+
+        & a {
+            text-align: center;
+            display: block;
+            padding: 8px 16px;
+            color: #444 !important;
+            text-decoration: none;
+            border-right: 1px solid rgba(0, 0, 0, 0.125);
+            
+        }
+
+        &:hover a {
+            text-decoration: underline;
+        }
+
+        &:last-child a {
+            border-right: 0px;
+        }
+
+    }
+}
+
+.menu-primary {
+    background-color: $primary;
+
+    & li a {
+        color: #fff !important;
+    }
+
+    & li:hover {
+        background: darken($primary, 10%);
+
+        & a {
+            text-decoration: none;
+        }
+    }
+}
+
+.menu-secondary {
+    background-color: $secondary;
+
+    & li a {
+        color: #fff !important;
+    }
+
+    & li:hover {
+        background: darken($secondary, 10%);
+
+        & a {
+            text-decoration: none;
+        }
+    }
+}
+
+.menu-tertiary {
+    background-color: $tertiary;
+
+    & li a {
+        color: #fff !important;
+    }
+
+    & li:hover {
+        background: darken($tertiary, 10%);
+
+        & a {
+            text-decoration: none;
+        }
+    }
+}
+
+.breadcrumbs {
+    margin: 0 0 1em 0;
+    padding: 0;
+    width: 100%;
+    
+    & li {
+        display: inline;
+    }
+}
+
+.menu-vertical {
+    padding: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    display: block;
+
+    & li {
+        display: block;
+        width:100%;
+
+        &.active {
+            
+        }
+
+        & a {
+            text-align: center;
+            display: block;
+            padding: 8px 16px;
+            color: #444 !important;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+            
+        }
+
+        &:hover a {
+            text-decoration: underline;
+        }
+
+        &:last-child a {
+            border-bottom: 0px;
+        }
+
+    }
+}
+
+.menu-vertical-primary {
+    background-color: $primary;
+
+    & li a {
+        color: #fff !important;
+    }
+
+    & li:hover {
+        background: darken($primary, 10%);
+
+        & a {
+            text-decoration: none;
+        }
+    }
+}
+
+.menu-vertical-secondary {
+    background-color: $secondary;
+
+    & li a {
+        color: #fff !important;
+    }
+
+    & li:hover {
+        background: darken($secondary, 10%);
+
+        & a {
+            text-decoration: none;
+        }
+    }
+}
+
+.menu-vertical-tertiary {
+    background-color: $tertiary;
+
+    & li a {
+        color: #fff !important;
+    }
+
+    & li:hover {
+        background: darken($tertiary, 10%);
+
+        & a {
+            text-decoration: none;
+        }
+    }
+}
+
+/* === MISC === */
+.alert {
+    width: 100%;
+    padding: 8px 16px;
+    margin: 0 0 1em 0;
+    background-color: #f8f8f8;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.alert-primary {
+    background-color: $primary;
+    color: #fff !important;
+
+    & a {
+        color: #fff !important;
+    }
+}
+
+.alert-secondary {
+    background-color: $secondary;
+    color: #fff !important;
+
+    & a {
+        color: #fff !important;
+    }
+}
+
+.alert-tertiary {
+    background-color: $tertiary;
+    color: #fff !important;
+
+    & a {
+        color: #fff !important;
+    }
+}
+
+.alert-outline {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.pagination {
+    padding: 0;
+    width: 100%;
+    
+    & li {
+        display: inline;
+
+        & a {
+            padding: 8px 16px;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            color: #444 !important;
+            text-decoration: none;
+        }
+
+        &:hover a {
+            border: 1px solid rgba(0, 0, 0, 0.250);
+            background-color: $greyscale1;
+        }
+    }
+}
+
+.badge {
+    display: inline-block;
+    background-color: #FD0;
+    padding: 1px 5px;
+    font-weight: bold;
+}
+
+.badge-primary {
+    background-color: $primary;
+    color: #fff;
+}
+
+.badge-secondary {
+    background-color: $secondary;
+    color: #fff;
+}
+
+.badge-tertiary {
+    background-color: $tertiary;
+    color: #fff;
+}
+
+/* === HELPER === */
+.hide {
+    display: none;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
