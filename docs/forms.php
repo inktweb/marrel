@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 
-<link rel="stylesheet" href="../marrel.css"> <!-- latest build -->
+<link rel="stylesheet" href="../marrel.min.css"> <!-- latest build -->
 
-<link rel="stylesheet" href="assets/prism.css">
-<script src="assets/prism.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
 </head>
 <body>
 
@@ -95,7 +95,7 @@
         
         <hr>
 
-        <p>Use the smallest viewport to simply use 100% width: <code>col-xs-12</code>.</p>
+        <p>Use the smallest viewport to simply use 100% width: <code>col-xs-12</code>. Wrap your rows around a <code>col</code> first to offset the negative margin.</p>
 
         <form class="form-horizontal">
             <label class="col-sm-2">Email</label>
@@ -117,13 +117,32 @@
             <div class="col-sm-2 col-sm-offset-10"><input type="submit" value="Login" class="btn btn-primary"></div>
         </form>
 
-        <p>Wrap your rows around a <code>col</code> first to offset the negative margin.</p>
-        <form class="form-horizontal">
-            <div class="col-xs-12">
-                <input type="text" value="1" class="col-xs-2">
-                <input type="submit" class="btn btn-primary col-xs-9 col-xs-offset-1" value="Plaats in mandje">
+        <p>Add class <code>btn-input</code> to a button to snuggle it next an input field. Use <code>btn-input-left</code> if the button is <em>before</em> the input field.</p>
+
+        <p>This applies a negative margin of the with of the elements borders (i.e. <code>2px</code>).</p>
+        <div class="row">
+            <div class="col-xs-4 pull-right">
+                <!-- snippet starts here -->
+                <form class="form-horizontal">
+                    <div class="col-xs-12">
+                        <input type="text" value="1" class="col-xs-3">
+                        <input type="submit" class="btn btn-secondary btn-input col-xs-9" value="Plaats in mandje">
+                    </div>
+                </form>
+                <!-- snippet ends here -->
             </div>
-        </form>
+            <div class="clearfix"></div>
+            <div class="col-xs-4 pull-left">
+                <!-- snippet starts here -->
+                <form class="form-horizontal">
+                    <div class="col-xs-12">
+                        <input type="submit" class="btn btn-tertiary btn-input-left col-xs-9" value="Plaats in mandje">
+                        <input type="text" value="1" class="col-xs-3">
+                    </div>
+                </form>
+                <!-- snippet ends here -->
+            </div>
+        </div>
 
         <h2>Helping classes</h2>
 

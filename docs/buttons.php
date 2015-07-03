@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 
-<link rel="stylesheet" href="../marrel.css"> <!-- latest build -->
+<link rel="stylesheet" href="../marrel.min.css"> <!-- latest build -->
 
-<link rel="stylesheet" href="assets/prism.css">
-<script src="assets/prism.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
 </head>
 <body>
 
@@ -29,12 +29,23 @@
         <p>Arugably the most important part of a CSS Toolkit.</p>
 
         <p><a href="#" class="btn">Default Button</a></p>
+        <pre><code class="language-markup"><?= htmlentities('<p><a href="#" class="btn">Default Button</a></p>'); ?></code></pre>
+        
         <p><a href="#" class="btn btn-primary">Primary Button</a></p>
+        <pre><code class="language-markup"><?= htmlentities('<p><a href="#" class="btn btn-primary">Primary Button</a></p>'); ?></code></pre>
+
         <p><a href="#" class="btn btn-secondary">Secondary Button</a></p>
+        <pre><code class="language-markup"><?= htmlentities('<p><a href="#" class="btn btn-secondary">Secondary Button</a></p>'); ?></code></pre>
+
         <p><a href="#" class="btn btn-tertiary">Tertiary Button</a></p>
+        <pre><code class="language-markup"><?= htmlentities('<p><a href="#" class="btn btn-tertiary">Tertiary Button</a></p>'); ?></code></pre>
+
         <p><a href="#" class="btn btn-outline">Outline Button</a></p>
+        <pre><code class="language-markup"><?= htmlentities('<p><a href="#" class="btn btn-outline">Outline Button</a></p>'); ?></code></pre>
+
         <p><a href="#" class="btn btn-disabled">Disabled Button</a></p>
-        <pre><code class="language-css">table tr:hover { color: #000; }</code></pre>
+        <pre><code class="language-markup"><?= htmlentities('<p><a href="#" class="btn btn-disabled">Disabled Button</a></p>'); ?></code></pre>
+
 
 
         

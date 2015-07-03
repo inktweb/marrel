@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 
-<link rel="stylesheet" href="../marrel.css"> <!-- latest build -->
+<link rel="stylesheet" href="../marrel.min.css"> <!-- latest build -->
 
-<link rel="stylesheet" href="assets/prism.css">
-<script src="assets/prism.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
 </head>
 <body>
 
@@ -51,7 +51,7 @@
 
         <p>
         Use class <code>menu</code> to format a list item in a proper menu. 
-        Add class <code>menu-primary</code>, <code>menu-secondary</code> or <code>menu-tertiary</code> to change the color. Notice how the default menu has a different hover effect.
+        Add class <code>menu-primary</code>, <code>menu-secondary</code> or <code>menu-tertiary</code> to change the color.
         </p>
 
         <ul class="menu">
@@ -79,6 +79,26 @@
         </ul>
 
         <ul class="menu menu-tertiary">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">Cartridges</a></li>
+            <li><a href="/">Toners</a></li>
+            <li><a href="/">Papier</a></li>
+            <li><a href="/">Labels</a></li>
+        </ul>
+
+        <p>Unique to this class is the additon of <code>menu-outline</code> for a simplistic list menu.</p>
+
+        <ul class="menu menu-outline">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">Cartridges</a></li>
+            <li><a href="/">Toners</a></li>
+            <li><a href="/">Papier</a></li>
+            <li><a href="/">Labels</a></li>
+        </ul>
+
+        <p>Don't want <code>width: 100%;</code>? Add the class <code>menu-auto</code>.</p>
+
+        <ul class="menu menu-auto">
             <li class="active"><a href="/">Home</a></li>
             <li><a href="/">Cartridges</a></li>
             <li><a href="/">Toners</a></li>
@@ -115,6 +135,16 @@
         </ul>
 
         <ul class="menu-vertical menu-vertical-tertiary">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">Cartridges</a></li>
+            <li><a href="/">Toners</a></li>
+            <li><a href="/">Papier</a></li>
+            <li><a href="/">Labels</a></li>
+        </ul>
+
+        <p>Don't want <code>width: 100%;</code>? Add the class <code>menu-vertical-auto</code>.</p>
+
+        <ul class="menu-vertical menu-vertical-auto">
             <li class="active"><a href="/">Home</a></li>
             <li><a href="/">Cartridges</a></li>
             <li><a href="/">Toners</a></li>

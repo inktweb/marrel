@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 
-<link rel="stylesheet" href="../marrel.css"> <!-- latest build -->
+<link rel="stylesheet" href="../marrel.min.css"> <!-- latest build -->
 
-<link rel="stylesheet" href="assets/prism.css">
-<script src="assets/prism.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
 </head>
 <body>
 
@@ -133,7 +133,24 @@
                 <td>Merk:</td>
                 <td><a href="/">HP</a></td>
             </tr>
-        </table>        
+        </table>
+
+        <p>Add class <code>table-inline</code> for one line high tables. </p>  
+
+        <table class="table-inline">
+            <tr>
+                <td>Inhoud:</td>
+                <td>1 stuks</td>
+            </tr>
+            <tr>
+                <td>Artikel nr:</td>
+                <td>CO-0950XLBK</td>
+            </tr>
+            <tr>
+                <td>Merk:</td>
+                <td>HP</td>
+            </tr>
+        </table>
 
     </div><!-- /col -->
 </div><!-- /row -->

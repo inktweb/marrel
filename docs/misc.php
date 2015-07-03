@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 
-<link rel="stylesheet" href="../marrel.css"> <!-- latest build -->
+<link rel="stylesheet" href="../marrel.min.css"> <!-- latest build -->
 
-<link rel="stylesheet" href="assets/prism.css">
-<script src="assets/prism.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
 </head>
 <body>
 
@@ -26,7 +26,7 @@
     <div class="col-md-8">
         <h1>Misc</h1>
 
-        <p>Also included:</p>
+        <p>General classes and helper functions</p>
 
         <h2>Alerts</h2>
 
@@ -65,7 +65,24 @@
         <p><span class="badge badge-secondary">Populair</span> Double A Presentation Papier 100 grams </p>
         <p>Alternatively you can use these <span class="badge badge-tertiary">badges</span> inside of paragraphs.</p>
 
+        <h2>Prices</h2>
+
+        <p>Simply add class <code>price-big</code> to a span or div to format prices.</p>
+
+        <p><span class="price-big">&euro; 15,00</span></p>
         
+        <p>Add <code>price-small</code> for a less intrusive price.</p>
+
+        <p><span class="price-small">&euro; 12,40</span> exclusief BTW</p>
+        <p><span class="price-small">+ &euro; 2,95</span> verzendkosten</p>
+
+        <h2>Helper classes</h2>
+
+        <p>Add class <code>hide</code> to an element to apply a <code>display: none;</code></p>
+
+        <p>Float elements with classes <code>pull-left</code> and <code>pull-right</code></p>
+
+        <p>Easily remove padding or margin with classes <code>remove-margin</code> and <code>remove-padding</code></p>
 
     </div><!-- /col -->
 </div><!-- /row -->

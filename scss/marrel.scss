@@ -13,13 +13,13 @@
 @import "bootstrip.scss";
 @import "normalize.scss";
 
-$text: #212121;            // light black
-$greyscale1: #f5f5f5;   // light grey
-$greyscale2: #eee;      // dark
-$greyscale3: #e0e0e0;   // darker
-$primary: #00b900;      // green
-$secondary: #009;       // blue;
-$tertiary: #e43e94;     // magenta;
+$color-text: #212121;         // light black
+$color-greyscale1: #eee;      // light grey
+$color-greyscale2: #ccc;      // dark
+$color-greyscale3: #999;      // darker
+$color-primary: #00b900;      // green
+$color-secondary: #009;       // blue;
+$color-tertiary: #e43e94;     // magenta;
 
 /* === TYPOGRAPHY === */
 
@@ -28,7 +28,7 @@ body {
     line-height: 1.5;
     letter-spacing: 0.01em;
     font-size: 100%;
-    color: $text;
+    color: $color-text;
 }
 
 h1,
@@ -95,21 +95,21 @@ pre,
 kbd {
     padding: 1px 5px;
     white-space: pre-wrap;
-    background-color: $greyscale1;
+    background-color: $color-greyscale1;
     font-family: Courier New, Courier, monospace, sans-serif;
 }
 
 blockquote {
     margin-left: 0;
     padding-left: 5px;
-    border-left: 5px solid $greyscale1;
+    border-left: 5px solid $color-greyscale1;
 }
 
 hr {
     border: 0;
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid $greyscale1;
+    border-bottom: 1px solid $color-greyscale1;
 }
 
 /* === RESPONSIVE === */
@@ -130,7 +130,7 @@ input,
 select,
 textarea {
     padding: 3px 5px !important;
-    border: 1px solid $greyscale3;
+    border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 2px;
     margin: 0 0 1em 0;
 }
@@ -194,8 +194,9 @@ form .required {
 }
 
 form .help {
-    color: #ccc;
+    color: $color-greyscale3;
     padding-top: 6px;
+    margin: 0;
 }
 
 form .error {
@@ -204,6 +205,15 @@ form .error {
 
 form .success {
     border: 1px solid green;
+}
+
+.btn-input,
+.btn-input-right {
+    margin-left: -2px;
+}
+
+.btn-input-left {
+    margin-right: -2px;
 }
 
 /* === BUTTONS === */
@@ -216,7 +226,7 @@ form .success {
 
     border: 1px solid rgba(0, 0, 0, 0.125);
     background-color: #f8f8f8;
-    color: #444 !important;
+    color: $color-text !important;
 
     &:hover {
         /* darken border */
@@ -232,48 +242,48 @@ form .success {
 }
 
 .btn-primary {
-    background-color: $primary;
+    background-color: $color-primary;
     color: #fff !important;
 
     &:hover {
-        background: darken($primary, 10%);
+        background: darken($color-primary, 10%);
     }
 }
 
 .btn-secondary {
-    background-color: $secondary;
+    background-color: $color-secondary;
     color: #fff !important;
 
     &:hover {
-        background: darken($secondary, 10%);
+        background: darken($color-secondary, 10%);
     }
 
 }
 
 .btn-tertiary {
-    background-color: $tertiary;
+    background-color: $color-tertiary;
     color: #fff !important;
 
     &:hover {
-        background: darken($tertiary, 10%);
+        background: darken($color-tertiary, 10%);
     }
 }
 
 .btn-outline {
     background-color: #fff; 
-    color: #444 !important;
-    border: 1px solid $greyscale1;
+    color: $color-text !important;
+    border: 1px solid $color-greyscale1;
 }
 
 .btn-disabled {
-    color: $greyscale2 !important;
+    color: $color-greyscale3 !important;
     text-decoration: line-through;
 }
 
 /* === TABLES === */
 table {
     width: 100%;
-    border:1px solid $greyscale1;
+    border:1px solid $color-greyscale1;
     margin: 0 0 1em 0;
     table-layout: fixed;
 
@@ -287,31 +297,39 @@ table {
     }
 
     &.table-bordered  {
-        border: 1px solid $greyscale1;
+        border: 1px solid $color-greyscale1;
 
         td,
         th {
-            border: 1px solid $greyscale1;
+            border: 1px solid $color-greyscale1;
         }
     }
 
     &.table-striped  {
 
         tr:nth-child(even) {
-            background: $greyscale1;
+            background: $color-greyscale1;
         }
     }
 }
 
 td,
 th {
-    border-bottom:1px solid $greyscale1;
+    border-bottom:1px solid $color-greyscale1;
     padding: 3px 5px;
 }
 
 th {
-    background: $greyscale2;
+    background: $color-greyscale2;
     text-align: left;
+}
+
+.table-inline {
+    width: auto;
+
+    & tr {
+        float: left;
+    }
 }
 
 /* === NAVIGATION === */
@@ -322,18 +340,18 @@ th {
 
      & li {
         display: table-cell;
-        border-bottom: 1px solid $greyscale3;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
         margin-right: -6px;
         text-align: center;
 
         &.active {
 
-            border: 1px solid $greyscale3;
+            border: 1px solid rgba(0, 0, 0, 0.125);
             border-radius: 2px;
             border-bottom: 0px solid rgba(0, 0, 0, 0);
 
             & a {
-                color: $text !important;
+                color: $color-text !important;
                 text-decoration: none;
             }
         }
@@ -363,14 +381,10 @@ th {
             text-align: center;
             display: block;
             padding: 8px 16px;
-            color: #444 !important;
+            color: $color-text !important;
             text-decoration: none;
             border-right: 1px solid rgba(0, 0, 0, 0.125);
             
-        }
-
-        &:hover a {
-            text-decoration: underline;
         }
 
         &:last-child a {
@@ -378,54 +392,55 @@ th {
         }
 
     }
+
+    & li:hover {
+        background: $color-greyscale1;
+    }
 }
 
 .menu-primary {
-    background-color: $primary;
+    background-color: $color-primary;
 
     & li a {
         color: #fff !important;
     }
 
     & li:hover {
-        background: darken($primary, 10%);
-
-        & a {
-            text-decoration: none;
-        }
+        background: darken($color-primary, 10%);
     }
 }
 
 .menu-secondary {
-    background-color: $secondary;
+    background-color: $color-secondary;
 
     & li a {
         color: #fff !important;
     }
 
     & li:hover {
-        background: darken($secondary, 10%);
-
-        & a {
-            text-decoration: none;
-        }
+        background: darken($color-secondary, 10%);
     }
 }
 
 .menu-tertiary {
-    background-color: $tertiary;
+    background-color: $color-tertiary;
 
     & li a {
         color: #fff !important;
     }
 
     & li:hover {
-        background: darken($tertiary, 10%);
-
-        & a {
-            text-decoration: none;
-        }
+        background: darken($color-tertiary, 10%);
     }
+}
+
+.menu-outline {
+    background-color: initial;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.menu-auto {
+    width: auto;
 }
 
 .breadcrumbs {
@@ -453,14 +468,13 @@ th {
             text-align: center;
             display: block;
             padding: 8px 16px;
-            color: #444 !important;
+            color: $color-text !important;
             text-decoration: none;
             border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-            
         }
 
-        &:hover a {
-            text-decoration: underline;
+        &:hover {
+            background: $color-greyscale1;
         }
 
         &:last-child a {
@@ -471,50 +485,47 @@ th {
 }
 
 .menu-vertical-primary {
-    background-color: $primary;
+    background-color: $color-primary;
 
     & li a {
         color: #fff !important;
     }
 
     & li:hover {
-        background: darken($primary, 10%);
-
-        & a {
-            text-decoration: none;
-        }
+        background: darken($color-primary, 10%);
     }
 }
 
 .menu-vertical-secondary {
-    background-color: $secondary;
+    background-color: $color-secondary;
 
     & li a {
         color: #fff !important;
     }
 
     & li:hover {
-        background: darken($secondary, 10%);
-
-        & a {
-            text-decoration: none;
-        }
+        background: darken($color-secondary, 10%);
     }
 }
 
 .menu-vertical-tertiary {
-    background-color: $tertiary;
+    background-color: $color-tertiary;
 
     & li a {
         color: #fff !important;
     }
 
     & li:hover {
-        background: darken($tertiary, 10%);
+        background: darken($color-tertiary, 10%);
+    }
+}
 
-        & a {
-            text-decoration: none;
-        }
+.menu-vertical-auto {
+    width: auto;
+    display: inline-block;
+
+    & li {
+        width: auto;
     }
 }
 
@@ -528,7 +539,7 @@ th {
 }
 
 .alert-primary {
-    background-color: $primary;
+    background-color: $color-primary;
     color: #fff !important;
 
     & a {
@@ -537,7 +548,7 @@ th {
 }
 
 .alert-secondary {
-    background-color: $secondary;
+    background-color: $color-secondary;
     color: #fff !important;
 
     & a {
@@ -546,7 +557,7 @@ th {
 }
 
 .alert-tertiary {
-    background-color: $tertiary;
+    background-color: $color-tertiary;
     color: #fff !important;
 
     & a {
@@ -568,13 +579,13 @@ th {
         & a {
             padding: 8px 16px;
             border: 1px solid rgba(0, 0, 0, 0.125);
-            color: #444 !important;
+            color: $color-text !important;
             text-decoration: none;
         }
 
         &:hover a {
             border: 1px solid rgba(0, 0, 0, 0.250);
-            background-color: $greyscale1;
+            background-color: $color-greyscale1;
         }
     }
 }
@@ -587,18 +598,29 @@ th {
 }
 
 .badge-primary {
-    background-color: $primary;
+    background-color: $color-primary;
     color: #fff;
 }
 
 .badge-secondary {
-    background-color: $secondary;
+    background-color: $color-secondary;
     color: #fff;
 }
 
 .badge-tertiary {
-    background-color: $tertiary;
+    background-color: $color-tertiary;
     color: #fff;
+}
+
+.price-big {
+    color: $color-tertiary;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.price-small {
+    color: $color-greyscale3;
+    font-size: smaller;
 }
 
 /* === HELPER === */
