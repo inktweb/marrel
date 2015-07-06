@@ -634,6 +634,12 @@ th {
     display: none;
 }
 
+@media print {
+    .hide-print {
+        display: none;
+    }
+}
+
 .pull-left {
     float: left;
 }

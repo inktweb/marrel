@@ -80,6 +80,8 @@
 
         <p>Add class <code>hide</code> to an element to apply a <code>display: none;</code></p>
 
+        <p>Add class <code>hide-print</code> to hide an element on the printed version of a page.</p>
+
         <p>Float elements with classes <code>pull-left</code> and <code>pull-right</code></p>
 
         <p>Easily remove padding or margin with classes <code>remove-margin</code> and <code>remove-padding</code></p>
