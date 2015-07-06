@@ -10,11 +10,17 @@ Marrel is build with SASS on top of the grid system from Bootstrap (via [Bootstr
 
 The end goal is not to create a toolkit that works for every use case but instead provides a solid starting point. Therefore the code does not contain twenty table styles and ten button sizes. Still -- when using this we encourage you to write as few new lines of CSS as possible and opt for *less is more*.
 
-# Usage
-Plop the following line in your terminal to make changes to the SCSS file. 
+# Getting started
+
+*(there will be a link to live css file here  when version numbering starts)*
+
+Documentation can be found at [https://marrel.inktweb.nl/](https://marrel.inktweb.nl/).
+
+# Building
+You'll need SASS installed. Plop the following line in your terminal to make changes to the SCSS file. 
 ````
 sass --watch scss/marrel.scss:marrel.min.css --style compressed
 ````
 
-Still in development -- alpha version -- documentation is not hosted online yet since the code is still changing daily.
+Still in development -- alpha version -- so no version numbering yet.
 
