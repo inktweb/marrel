@@ -92,11 +92,17 @@ dt {
 
 code,
 pre,
-kbd {
+kbd,
+samp {
     padding: 1px 5px;
     white-space: pre-wrap;
     background-color: $color-greyscale1;
     font-family: Courier New, Courier, monospace, sans-serif;
+}
+
+mark {
+    background: #ff0;
+    color: $color-text;
 }
 
 blockquote {
@@ -130,7 +136,7 @@ input,
 select,
 textarea {
     padding: 3px 5px !important;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 1px solid $color-greyscale1;
     border-radius: 2px;
     margin: 0 0 1em 0;
 }
@@ -224,19 +230,19 @@ form .success {
     display: inline-block;
     line-height: inherit !important;
 
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 1px solid $color-greyscale1;
     background-color: #f8f8f8;
     color: $color-text !important;
 
     &:hover {
         /* darken border */
-        border: 1px solid rgba(0, 0, 0, 0.250);
+        border: 1px solid $color-greyscale2;
     }
 
     &:active {
         /* shadow inside button */
-        -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
-        box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+        -webkit-box-shadow: inset 0 3px 5px $color-greyscale1;
+        box-shadow: inset 0 3px 5px $color-greyscale1;
     }
 
 }
@@ -340,13 +346,13 @@ th {
 
      & li {
         display: table-cell;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        border-bottom: 1px solid $color-greyscale1;
         margin-right: -6px;
         text-align: center;
 
         &.active {
 
-            border: 1px solid rgba(0, 0, 0, 0.125);
+            border: 1px solid $color-greyscale1;
             border-radius: 2px;
             border-bottom: 0px solid rgba(0, 0, 0, 0);
 
@@ -367,7 +373,7 @@ th {
     padding: 0;
     width: 100%;
     background-color: #f8f8f8;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 1px solid $color-greyscale1;
     display: table;
 
     & li {
@@ -383,7 +389,7 @@ th {
             padding: 8px 16px;
             color: $color-text !important;
             text-decoration: none;
-            border-right: 1px solid rgba(0, 0, 0, 0.125);
+            border-right: 1px solid $color-greyscale1;
             
         }
 
@@ -457,7 +463,7 @@ th {
     padding: 0;
     width: 100%;
     background-color: #f8f8f8;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 1px solid $color-greyscale1;
     display: block;
 
     & li {
@@ -470,7 +476,7 @@ th {
             padding: 8px 16px;
             color: $color-text !important;
             text-decoration: none;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+            border-bottom: 1px solid $color-greyscale1;
         }
 
         &:hover {
@@ -535,7 +541,7 @@ th {
     padding: 8px 16px;
     margin: 0 0 1em 0;
     background-color: #f8f8f8;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 1px solid $color-greyscale1;
 }
 
 .alert-primary {
@@ -578,13 +584,13 @@ th {
 
         & a {
             padding: 8px 16px;
-            border: 1px solid rgba(0, 0, 0, 0.125);
+            border: 1px solid $color-greyscale1;
             color: $color-text !important;
             text-decoration: none;
         }
 
         &:hover a {
-            border: 1px solid rgba(0, 0, 0, 0.250);
+            border: 1px solid $color-greyscale2;
             background-color: $color-greyscale1;
         }
     }
