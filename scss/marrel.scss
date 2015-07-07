@@ -508,7 +508,8 @@ th {
       border-bottom: 1px solid $color-greyscale1;
     }
 
-    &:hover {
+    &:hover,
+    &.active {
       background: $color-greyscale1;
     }
 
@@ -527,9 +528,11 @@ th {
     color: #fff !important;
   }
 
-  & li:hover {
+  & li:hover,
+  & li.active {
     background: darken($color-primary, 10%);
   }
+
 }
 
 .menu-vertical-secondary {
@@ -539,9 +542,11 @@ th {
     color: #fff !important;
   }
 
-  & li:hover {
+  & li:hover,
+  & li.active {
     background: darken($color-secondary, 10%);
   }
+
 }
 
 .menu-vertical-tertiary {
@@ -551,9 +556,11 @@ th {
     color: #fff !important;
   }
 
-  & li:hover {
+  & li:hover,
+  & li.active {
     background: darken($color-tertiary, 10%);
   }
+
 }
 
 .menu-vertical-auto {
@@ -562,7 +569,14 @@ th {
 
   & li {
     width: auto;
+
+    &:hover,
+    &.active {
+      background: $color-greyscale1;
+    }
+
   }
+
 }
 
 /* === MISC === */
@@ -581,6 +595,7 @@ th {
   & a {
     color: #fff !important;
   }
+
 }
 
 .alert-secondary {
@@ -590,6 +605,7 @@ th {
   & a {
     color: #fff !important;
   }
+
 }
 
 .alert-tertiary {
@@ -599,6 +615,7 @@ th {
   & a {
     color: #fff !important;
   }
+  
 }
 
 .alert-outline {
@@ -671,7 +688,7 @@ th {
   .hide-print {
     display: none;
   }
-  
+
 }
 
 .center {
