@@ -146,6 +146,11 @@ input {
     padding: 8+3px 5px !important;
 }
 
+input:disabled,
+option:disabled {
+    background-color: $color-greyscale1;
+}
+
 label {
     font-weight: bold;
     padding-top:6px;
@@ -380,7 +385,7 @@ th {
         display: table-cell;
 
         &.active {
-            
+            background-color: $color-greyscale1;
         }
 
         & a {
@@ -638,6 +643,12 @@ th {
     .hide-print {
         display: none;
     }
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pull-left {
