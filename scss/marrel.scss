@@ -416,7 +416,8 @@ th {
         color: #fff !important;
     }
 
-    & li:hover {
+    & li:hover,
+    & li.active {
         background: darken($color-primary, 10%);
     }
 }
@@ -428,7 +429,8 @@ th {
         color: #fff !important;
     }
 
-    & li:hover {
+    & li:hover,
+    & li.active {
         background: darken($color-secondary, 10%);
     }
 }
@@ -440,7 +442,8 @@ th {
         color: #fff !important;
     }
 
-    & li:hover {
+    & li:hover,
+    & li.active {
         background: darken($color-tertiary, 10%);
     }
 }
@@ -448,6 +451,16 @@ th {
 .menu-outline {
     background-color: initial;
     border: 1px solid rgba(0, 0, 0, 0);
+
+    & li:hover,
+    & li.active {
+        background-color: initial;
+    }
+
+    & li:hover a,
+    & li.active a {
+        text-decoration: underline;
+    }
 }
 
 .menu-auto {
