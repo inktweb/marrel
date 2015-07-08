@@ -692,12 +692,14 @@ th {
 
 .price-big {
   font-weight: bold;
-  font-size: larger;
+  font-size: 150%;
+  vertical-align: baseline;
   color: $color-tertiary;
 }
 
 .price-small {
-  font-size: smaller;
+  font-size: 90%;
+  vertical-align: baseline;
   color: $color-greyscale3;
 }
 
