@@ -27,7 +27,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   letter-spacing: 0.01em;
-  font-size: 100%;
+  font-size: 85%;
   color: $color-text;
 }
 
@@ -38,7 +38,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0 0 1em 0;
+  margin: 0 0 .5em 0;
 }
 
 h1 {
@@ -135,15 +135,14 @@ textarea {
 input,
 select,
 textarea {
-  padding: 3px 5px !important;
+  padding: 2px 5px !important;
   margin: 0 0 1em 0;
   border: 1px solid $color-greyscale1;
   border-radius: 2px;
 }
 
 input {
-  // for proper alignment with button padding
-  padding: 8+3px 5px !important;
+  padding: 7+2px 5px !important;
 }
 
 input:disabled,
@@ -153,11 +152,11 @@ option:disabled {
 
 input[type="radio"],
 input[type="checkbox"] {
-  margin: .5em 0 .5em 0;
+  margin: .25em 0 .25em 0;
 }
 
 label {
-  padding-top:6px;
+  padding: 10px 0;
   font-weight: bold;
 }
 
@@ -233,7 +232,7 @@ form .success {
 
 /* === BUTTONS === */
 .btn {
-  padding: 8px 16px !important;
+  padding: 6.5px 16px !important;
   display: inline-block;
   text-decoration: none;
   line-height: inherit !important;
