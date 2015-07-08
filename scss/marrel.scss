@@ -151,6 +151,11 @@ option:disabled {
   background-color: $color-greyscale1;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+  margin: .5em 0 .5em 0;
+}
+
 label {
   padding-top:6px;
   font-weight: bold;
@@ -205,8 +210,7 @@ form .required {
 }
 
 form .help {
-  padding-top: 6px;
-  margin: 0;
+  margin: .5em 0 .5em 0;
   color: $color-greyscale3;
 }
 
