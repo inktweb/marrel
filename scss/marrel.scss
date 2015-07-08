@@ -636,7 +636,8 @@ th {
       color: $color-text !important;
     }
 
-    &:hover a {
+    &:hover a,
+    &.active a {
       background-color: $color-greyscale1;
       border: 1px solid $color-greyscale2;
     }
