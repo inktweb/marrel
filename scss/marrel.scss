@@ -412,7 +412,9 @@ th {
 .menu {
   width: 100%;
   display: table;
+  table-layout: fixed;
   padding: 0;
+  white-space: nowrap; 
   background-color: #f8f8f8;
   border: 1px solid $color-greyscale1;
   
@@ -426,6 +428,7 @@ th {
       & a {
         display: block;
         padding: 8px 16px;
+        overflow: hidden;
         text-align: center;
         text-decoration: none;
         color: $color-text !important;
@@ -433,7 +436,7 @@ th {
       }
       
       &:last-child a {
-        border-right: 0px;
+        border-right: 0;
       }
   }
   
@@ -441,6 +444,30 @@ th {
     background: $color-greyscale1;
   }
 
+}
+
+// Make .menu vertical on small devices
+@media screen and (max-width: 768px) { 
+  .menu {
+    display: block;
+
+    & li {
+      display: block;
+
+      & a {
+        text-align: left;
+        border-bottom: 1px solid $color-greyscale1;
+        border-right: 0;
+      }
+
+      &:last-child a {
+        border-bottom: 0;
+        border-right: 0;
+      }
+
+    }
+    
+  }
 }
 
 .menu-primary {
@@ -741,6 +768,18 @@ th {
 
 .pull-right {
   float: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .remove-margin {
