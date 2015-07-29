@@ -2,18 +2,21 @@
  * Marrel.css pre-release
  * Licensed under MIT
  *
- * 
+ *
  * Bootstrip - Bootstrap with only the Grid and Responsive components.
  * Bootstrap v3.3.4 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  *
- * normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
+ * normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
 */
 @import "bootstrip.scss";
 @import "normalize.scss";
 
 $color-text: #212121;         // light black
+$color-link: #265C83;         // blue
+$color-link-hover: #7FDBFF;     // lighter blue
+$color-link-active: #007BE6;    // darker blue
 $color-greyscale1: #eee;      // light grey
 $color-greyscale2: #ccc;      // dark
 $color-greyscale3: #999;      // darker
@@ -70,20 +73,20 @@ p {
 }
 
 a {
-  color: #265C83;
+  color: $color-link;
 }
 
 a:link,
 a:visited {
-  color: #265C83;
+  color: $color-link;
 }
 
 a:hover {
-  color: #7FDBFF;
+  color: $color-link-hover;
 }
 
 a:active {
-  color: #007BE6;
+  color: $color-link-active;
 }
 
 dt {
@@ -119,14 +122,14 @@ hr {
 }
 
 /* === RESPONSIVE === */
-img, 
-canvas, 
-iframe, 
-video, 
-svg, 
-select, 
-textarea { 
-  max-width: 100%; 
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -139,10 +142,17 @@ textarea {
   margin: 0 0 1em 0;
   border: 1px solid $color-greyscale1;
   border-radius: 2px;
+
+  &:focus {
+    outline: 0;
+    border: 1px solid $color-link-hover;
+  }
+
 }
 
 input {
   padding: 8+3px 5px !important;
+
 }
 
 input:disabled,
@@ -169,7 +179,7 @@ label {
 
 .form-full {
   width: 100%;
-  
+
   input,
   select,
   label,
@@ -179,7 +189,7 @@ label {
   }
 
 }
- 
+
 .form-full label input {
   width: auto;
   display: inline-block;
@@ -189,7 +199,7 @@ label {
   width: 100%;
   margin-right: -15px;
   margin-left: -15px;
-  
+
   input,
   select,
   textarea {
@@ -201,13 +211,13 @@ label {
     margin-right: 3px;
     margin-left: -15px;
   }
-    
+
 }
 
 .form-horizontal:after {
-  content:"";
-  display:table;
-  clear:both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 form .required {
@@ -311,7 +321,7 @@ form .success {
 .btn-outline {
   color: $color-text !important;
   border: 1px solid $color-greyscale1;
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 .btn-disabled {
@@ -326,9 +336,13 @@ table {
   margin: 0 0 1em 0;
   table-layout: fixed;
 
+  tr:hover {
+    background: $color-greyscale2;
+  }
+
   &.table-borderless  {
     border: 1px rgba(0, 0, 0, 0);
-    
+
     td,
     th {
         border: 0;
@@ -338,7 +352,7 @@ table {
 
   &.table-bordered  {
     border: 1px solid $color-greyscale1;
-    
+
     td,
     th {
         border: 1px solid $color-greyscale1;
@@ -347,7 +361,7 @@ table {
   }
 
   &.table-striped  {
-    
+
     tr:nth-child(even) {
         background: $color-greyscale1;
     }
@@ -364,14 +378,22 @@ th {
 
 th {
   text-align: left;
-  background: $color-greyscale2;
+  background: $color-greyscale1;
 }
 
 .table-inline {
   width: auto;
-  
+
   & tr {
     float: left;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .table-responsive {
+    overflow-x: auto;
   }
 
 }
@@ -381,25 +403,25 @@ th {
   padding: 0;
   width: 100%;
   display: table;
-   
+
   & li {
     display: table-cell;
     margin-right: -6px;
     text-align: center;
     border-bottom: 1px solid $color-greyscale1;
-    
+
     &.active {
       border: 1px solid $color-greyscale1;
       border-radius: 2px;
       border-bottom: 0px solid rgba(0, 0, 0, 0);
-      
+
       & a {
         color: $color-text !important;
         text-decoration: none;
       }
 
     }
-    
+
     & a {
       display: block;
       padding: 8px 16px;
@@ -414,17 +436,17 @@ th {
   display: table;
   table-layout: fixed;
   padding: 0;
-  white-space: nowrap; 
+  white-space: nowrap;
   background-color: #f8f8f8;
   border: 1px solid $color-greyscale1;
-  
+
   & li {
     display: table-cell;
-      
+
       &.active {
         background-color: $color-greyscale1;
       }
-      
+
       & a {
         display: block;
         padding: 8px 16px;
@@ -434,12 +456,12 @@ th {
         color: $color-text !important;
         border-right: 1px solid $color-greyscale1;
       }
-      
+
       &:last-child a {
         border-right: 0;
       }
   }
-  
+
   & li:hover {
     background: $color-greyscale1;
   }
@@ -447,7 +469,7 @@ th {
 }
 
 // Make .menu vertical on small devices
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 768px) {
   .menu {
     display: block;
 
@@ -466,17 +488,17 @@ th {
       }
 
     }
-    
+
   }
 }
 
 .menu-primary {
   background-color: $color-primary;
-  
+
   & li a {
     color: #fff !important;
   }
-  
+
   & li:hover,
   & li.active {
     background: darken($color-primary, 10%);
@@ -486,11 +508,11 @@ th {
 
 .menu-secondary {
   background-color: $color-secondary;
-  
+
   & li a {
     color: #fff !important;
   }
-  
+
   & li:hover,
   & li.active {
     background: darken($color-secondary, 10%);
@@ -500,11 +522,11 @@ th {
 
 .menu-tertiary {
   background-color: $color-tertiary;
-  
+
   & li a {
     color: #fff !important;
   }
-  
+
   & li:hover,
   & li.active {
     background: darken($color-tertiary, 10%);
@@ -515,7 +537,7 @@ th {
 .menu-outline {
   background-color: initial;
   border: 1px solid rgba(0, 0, 0, 0);
-  
+
   & li:hover,
   & li.active {
     background-color: initial;
@@ -542,7 +564,7 @@ th {
   width: 100%;
   margin: 0 0 1em 0;
   padding: 0;
-  
+
   & li {
     display: inline;
   }
@@ -676,7 +698,7 @@ th {
   & a {
     color: #fff !important;
   }
-  
+
 }
 
 .alert-outline {
@@ -686,7 +708,7 @@ th {
 .pagination {
   width: 100%;
   padding: 0;
-  
+
   & li {
     display: inline;
 
@@ -711,6 +733,7 @@ th {
   display: inline-block;
   padding: 1px 5px;
   font-weight: bold;
+  font-size: initial;
   background-color: #FD0;
 }
 
