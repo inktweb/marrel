@@ -338,6 +338,7 @@ table {
 
   tr:hover {
     background: $color-greyscale2;
+    transition: all 0.3s;
   }
 
   &.table-borderless  {
@@ -366,6 +367,10 @@ table {
         background: $color-greyscale1;
     }
 
+    tr:hover {
+      background: $color-greyscale2;
+    }
+
   }
 
 }
@@ -373,12 +378,17 @@ table {
 td,
 th {
   padding: 3px 5px;
+}
+
+td {
   border-bottom:1px solid $color-greyscale1;
 }
 
 th {
   text-align: left;
-  background: $color-greyscale1;
+  font-weight: normal;
+  color: white;
+  background: $color-greyscale3;
 }
 
 .table-inline {
