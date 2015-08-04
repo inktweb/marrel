@@ -398,6 +398,10 @@ th {
     float: left;
   }
 
+  & tr:hover {
+    background: initial;
+  }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -476,15 +480,37 @@ th {
     background: $color-greyscale1;
   }
 
+  & .hamburger-btn {
+    display: none;
+  }
+
 }
 
 // Make .menu vertical on small devices
 @media screen and (max-width: 768px) {
+
   .menu {
     display: block;
 
-    & li {
+    & .hamburger-btn {
       display: block;
+
+      & span.slice {
+        display: block;
+        width: 19px;
+        height: 3px;
+        margin: 3px;
+        background: $color-greyscale3;
+
+        &:nth-child(2) {
+          width: 14px;
+        }
+
+      }
+    }
+
+    & li {
+      display: none;
 
       & a {
         text-align: left;
@@ -743,7 +769,7 @@ th {
   display: inline-block;
   padding: 1px 5px;
   font-weight: bold;
-  font-size: initial;
+  font-size: inherit;
   background-color: #FD0;
 }
 
@@ -776,6 +802,13 @@ th {
 }
 
 /* === HELPER === */
+.truncate {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .hide {
   display: none;
 }
