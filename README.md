@@ -12,7 +12,14 @@ The end goal is not to create a toolkit that works for every use case but instea
 
 # Getting started
 
-*(there will be a link to live css file here  when version numbering starts)*
+Include the following files:
+````
+<link rel=“stylesheet” href=“//www.inktweb.nl/includes/marrel/marrel.min.css”>
+<script src=“//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js”></script>
+<script src=“//www.inktweb.nl/includes/marrel/marrel.js”></script>
+
+````
+**(the .js files are only needed if you want the `hamburger-menu`)**
 
 Documentation can be found at [https://marrel.inktweb.nl/](https://marrel.inktweb.nl/).
 
