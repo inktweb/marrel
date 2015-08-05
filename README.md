@@ -14,12 +14,12 @@ The end goal is not to create a toolkit that works for every use case but instea
 
 Include the following files:
 ````
-<link rel=“stylesheet” href=“//www.inktweb.nl/includes/marrel/marrel.min.css”>
-<script src=“//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js”></script>
-<script src=“//www.inktweb.nl/includes/marrel/marrel.js”></script>
+<link rel="stylesheet" href="//www.inktweb.nl/includes/marrel/marrel.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//www.inktweb.nl/includes/marrel/marrel.js"></script>
 
 ````
-**(the .js files are only needed if you want the `hamburger-menu`)**
+**(the .js files are pretty much optional in the current versions since it's only used for the `hamburger-menu`)**
 
 Documentation can be found at [https://marrel.inktweb.nl/](https://marrel.inktweb.nl/).
 
@@ -28,6 +28,4 @@ You'll need Sass installed. Plop the following line in your terminal to make cha
 ````
 sass --watch scss/marrel.scss:marrel.min.css --style compressed
 ````
-
-Still in development -- alpha version -- so no version numbering yet.
 
