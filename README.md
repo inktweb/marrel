@@ -14,7 +14,8 @@ The end goal is not to create a toolkit that works for every use case but instea
 
 Include the following files:
 ````HTML
-<link rel="stylesheet" href="//www.inktweb.nl/includes/marrel/marrel.min.css">
+<link rel="stylesheet" href="//marrel.inktweb.nl/marrel.min.css"> <!-- latest -->
+<link rel="stylesheet" href="//marrel.inktweb.nl/1.1.0/marrel.min.css"> <!-- specific version -->
 ````
 
 Documentation can be found at [https://marrel.inktweb.nl/](https://marrel.inktweb.nl/).
