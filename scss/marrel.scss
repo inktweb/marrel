@@ -10,7 +10,7 @@
  *
  * normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
  *
- * LINKS | MIT License | github.com/mrmrs/links
+ * LINKS v0.0.1 | MIT License | github.com/mrmrs/links
 */
 @import "bootstrip.scss";
 @import "normalize.scss";
@@ -120,7 +120,7 @@ hr {
   border: 0;
   height: 0;
   border-top: 1px solid rgba(0,0,0,.1);
-  border-bottom: 1px solid $color-greyscale1;
+  border-bottom: 1px solid $color-greyscale2;
 }
 
 a object {
