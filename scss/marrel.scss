@@ -1,5 +1,5 @@
 /*!
- * Marrel.css v1.0
+ * Marrel.css v1.1
  * Licensed under MIT
  *
  *
@@ -9,20 +9,22 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  *
  * normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
+ *
+ * LINKS | MIT License | github.com/mrmrs/links
 */
 @import "bootstrip.scss";
 @import "normalize.scss";
 
 $color-text: #212121;         // light black
-$color-link: #265C83;         // blue
-$color-link-hover: #7FDBFF;     // lighter blue
-$color-link-active: #007BE6;    // darker blue
-$color-greyscale1: #eee;      // light grey
-$color-greyscale2: #ccc;      // dark
-$color-greyscale3: #999;      // darker
+$color-link: #265C83;         // blue (LINKS)
+$color-link-hover: #7FDBFF;   // lighter blue (LINKS)
+$color-link-active: #007BE6;  // darker blue (LINKS)
+$color-greyscale1: #eee;      // very light grey
+$color-greyscale2: #ccc;      // light grey
+$color-greyscale3: #293133;   // Anthracite grey
 $color-primary: #00b900;      // green
-$color-secondary: #009;       // blue;
-$color-tertiary: #e43e94;     // magenta;
+$color-secondary: #009;       // blue
+$color-tertiary: #e43e94;     // magenta
 
 /* === TYPOGRAPHY === */
 
@@ -121,6 +123,14 @@ hr {
   border-bottom: 1px solid $color-greyscale1;
 }
 
+a object {
+  cursor: pointer;
+}
+
+object {
+  pointer-events: none;
+}
+
 /* === RESPONSIVE === */
 img,
 canvas,
@@ -140,7 +150,7 @@ select,
 textarea {
   padding: 3px 5px !important;
   margin: 0 0 1em 0;
-  border: 1px solid $color-greyscale1;
+  border: 1px solid $color-greyscale2;
   border-radius: 2px;
 
   &:focus {
@@ -157,7 +167,7 @@ input {
 
 input:disabled,
 option:disabled {
-  background-color: $color-greyscale1;
+  background-color: $color-greyscale2;
 }
 
 input[type="radio"],
@@ -480,34 +490,13 @@ th {
     background: $color-greyscale1;
   }
 
-  & .hamburger-btn {
-    display: none;
-  }
-
 }
 
 // Make .menu vertical on small devices
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
   .menu {
     display: block;
-
-    & .hamburger-btn {
-      display: block;
-
-      & span.slice {
-        display: block;
-        width: 19px;
-        height: 3px;
-        margin: 3px;
-        background: $color-greyscale3;
-
-        &:nth-child(2) {
-          width: 14px;
-        }
-
-      }
-    }
 
     & li {
       display: none;
