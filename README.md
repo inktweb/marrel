@@ -13,9 +13,8 @@ The end goal is not to create a toolkit that works for every use case but instea
 # Getting started
 
 Include the following files:
-````
+````HTML
 <link rel="stylesheet" href="//www.inktweb.nl/includes/marrel/marrel.min.css">
-
 ````
 
 Documentation can be found at [https://marrel.inktweb.nl/](https://marrel.inktweb.nl/).
