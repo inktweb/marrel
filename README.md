@@ -6,7 +6,7 @@ This is heavily inspired by Github's [Primer](https://github.com/primer/primer) 
 The name comes from an abbreviation from **Mar**gin **Rel**ease. A `btn` often found on typewriters which allows you to write on the margins of a page.
 
 ## How does it work?
-Marrel is built with Sass on top of the grid system from Bootstrap (via [Bootstrip](https://github.com/MartijnOud/bootstrip)) and [normalize.css](https://necolas.github.io/normalize.css/).
+Marrel is built with Sass on top of the grid system from Bootstrap (via [Bootstrip](https://github.com/MartijnOud/bootstrip)), [normalize.css](https://necolas.github.io/normalize.css/) and [LINKS](https://github.com/mrmrs/links).
 
 The end goal is not to create a toolkit that works for every use case but instead provides a solid starting point. Therefore the code does not contain twenty table styles and ten button sizes. Still — when using this we encourage you to write as few new lines of CSS as possible and opt for *less is more*.
 
