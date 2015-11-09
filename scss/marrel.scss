@@ -1,6 +1,5 @@
 /*!
- * Marrel.css v1.1.0
- * Licensed under MIT
+ * Marrel.css v1.2.0 | MIT License | https://marrel.inktweb.nl/
  *
  *
  * Bootstrip - Bootstrap with only the Grid and Responsive components.
@@ -166,7 +165,8 @@ input {
 }
 
 input:disabled,
-option:disabled {
+option:disabled,
+select:disabled {
   background-color: $color-greyscale2;
 }
 
@@ -583,6 +583,11 @@ th {
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  & li a {
+    display: block;
+  }
+
 }
 
 .breadcrumbs {
@@ -590,7 +595,8 @@ th {
   margin: 0 0 1em 0;
   padding: 0;
 
-  & li {
+  & li,
+  & div {
     display: inline;
   }
 
