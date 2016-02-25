@@ -17,7 +17,7 @@ Include the following files:
 <!-- latest -->
 <link rel="stylesheet" href="//marrel.inktweb.nl/marrel.min.css">
 <!-- specific version -->
-<link rel="stylesheet" href="//marrel.inktweb.nl/1.2.0/marrel.min.css">
+<link rel="stylesheet" href="//marrel.inktweb.nl/1.2.1/marrel.min.css">
 ````
 
 Documentation can be found at [https://marrel.inktweb.nl/](https://marrel.inktweb.nl/).
@@ -27,4 +27,3 @@ You'll need Sass installed. Plop the following line in your terminal to make cha
 ````
 sass --watch scss/marrel.scss:marrel.min.css --style compressed
 ````
-

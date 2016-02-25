@@ -1,5 +1,5 @@
 /*!
- * Marrel.css v1.2.0 | MIT License | https://marrel.inktweb.nl/
+ * Marrel.css v1.2.1 | MIT License | https://marrel.inktweb.nl/
  *
  *
  * Bootstrip - Bootstrap with only the Grid and Responsive components.
@@ -166,7 +166,8 @@ input {
 
 input:disabled,
 option:disabled,
-select:disabled {
+select:disabled,
+input:read-only {
   background-color: $color-greyscale2;
 }
 
@@ -207,8 +208,6 @@ label {
 
 .form-horizontal {
   width: 100%;
-  margin-right: -15px;
-  margin-left: -15px;
 
   input,
   select,
@@ -412,6 +411,10 @@ th {
     background: initial;
   }
 
+  & td {
+    display: inline;
+  }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -433,6 +436,7 @@ th {
     margin-right: -6px;
     text-align: center;
     border-bottom: 1px solid $color-greyscale1;
+    word-break: break-word;
 
     &.active {
       border: 1px solid $color-greyscale1;
@@ -700,6 +704,18 @@ th {
   margin: 0 0 1em 0;
   background-color: #f8f8f8;
   border: 1px solid $color-greyscale1;
+
+  /* Reset margins inside .alert's */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
 }
 
 .alert-primary {
@@ -796,6 +812,25 @@ th {
   color: $color-greyscale3;
 }
 
+.price-muted {
+  position: relative;
+  display: inline-block;
+  color: $color-greyscale3;
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid;
+    border-color: inherit;
+    transform: rotate(-7deg);
+  }
+
+}
+
+
 /* === HELPER === */
 .truncate {
   display: block;
@@ -805,12 +840,14 @@ th {
 }
 
 .hide {
+  visibility: hidden;
   display: none;
 }
 
 @media print {
 
   .hide-print {
+    visibility: hidden;
     display: none;
   }
 
