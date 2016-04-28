@@ -83,10 +83,18 @@ form .help {
   color: $color-greyscale3;
 }
 
-form .error {
-  border: 1px solid $color-error;
+form .info {
+  border: 1px solid $color-info;
 }
 
 form .success {
   border: 1px solid $color-success;
+}
+
+form .warning {
+  border: 1px solid $color-warning;
+}
+
+form .error {
+  border: 1px solid $color-error;
 }
