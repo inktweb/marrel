@@ -1,0 +1,92 @@
+/**
+ * Forms
+ */
+input,
+select,
+textarea {
+  padding: 3px 5px;
+  margin: 0 0 1em 0;
+  border: 1px solid $color-greyscale2;
+  border-radius: 2px;
+}
+
+input {
+  padding: 8+3px 5px;
+
+}
+
+input:disabled,
+option:disabled,
+select:disabled,
+input:read-only:not([type="submit"]) {
+  background-color: $color-greyscale2;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+select {
+  margin-top: 20px;
+}
+
+label {
+  padding: 9.5px 0;
+  font-weight: bold;
+
+  & input[type="radio"],
+  & input[type="checkbox"] {
+    margin: -9.5px 0;
+  }
+
+}
+
+.form-full {
+  width: 100%;
+
+  input,
+  select,
+  label,
+  textarea {
+      width: 100%;
+      display: block;
+  }
+
+}
+
+.form-full label input {
+  width: auto;
+  display: inline-block;
+}
+
+.form-horizontal {
+  width: 100%;
+
+  label input[type="radio"] {
+    margin-right: 3px;
+    margin-left: -15px;
+  }
+
+}
+
+.form-horizontal:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+form .required {
+  float: right;
+  color: red;
+}
+
+form .help {
+  margin: .5em 0 .5em 0;
+  color: $color-greyscale3;
+}
+
+form .error {
+  border: 1px solid red;
+}
+
+form .success {
+  border: 1px solid green;
+}

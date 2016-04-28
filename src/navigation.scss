@@ -1,0 +1,297 @@
+/**
+ * Navigation (menu's)
+ */
+.tabs {
+  padding: 0;
+  width: 100%;
+  display: table;
+
+  & li {
+    display: table-cell;
+    margin-right: -6px;
+    text-align: center;
+    border-bottom: 1px solid $color-greyscale1;
+    word-break: break-word;
+
+    &.active {
+      border: 1px solid $color-greyscale1;
+      border-radius: 2px;
+      border-bottom: 0px solid rgba(0, 0, 0, 0);
+
+      & a {
+        color: $color-text !important;
+        text-decoration: none;
+      }
+
+    }
+
+    & a {
+      display: block;
+      padding: 8px 16px;
+    }
+
+  }
+
+}
+
+.menu {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+  white-space: nowrap;
+  background-color: #f8f8f8;
+  border: 1px solid $color-greyscale1;
+
+  & li {
+    display: table-cell;
+
+      &.active {
+        background-color: $color-greyscale1;
+      }
+
+      & a {
+        display: block;
+        padding: 8px 16px;
+        overflow: hidden;
+        text-align: center;
+        text-decoration: none;
+        color: $color-text !important;
+        border-right: 1px solid $color-greyscale1;
+      }
+
+      &:last-child a {
+        border-right: 0;
+      }
+  }
+
+  & li:hover {
+    background: $color-greyscale1;
+  }
+
+}
+
+// Make .menu vertical on small devices
+@media screen and (max-width: 767px) {
+
+  .menu {
+    display: block;
+
+    & li {
+      display: none;
+
+      & a {
+        text-align: left;
+        border-bottom: 1px solid $color-greyscale1;
+        border-right: 0;
+      }
+
+      &:last-child a {
+        border-bottom: 0;
+        border-right: 0;
+      }
+
+    }
+
+  }
+}
+
+.menu-primary {
+  background-color: $color-primary;
+
+  & li a {
+    color: #fff !important;
+  }
+
+  & li:hover,
+  & li.active {
+    background: darken($color-primary, 10%);
+  }
+
+}
+
+.menu-secondary {
+  background-color: $color-secondary;
+
+  & li a {
+    color: #fff !important;
+  }
+
+  & li:hover,
+  & li.active {
+    background: darken($color-secondary, 10%);
+  }
+
+}
+
+.menu-tertiary {
+  background-color: $color-tertiary;
+
+  & li a {
+    color: #fff !important;
+  }
+
+  & li:hover,
+  & li.active {
+    background: darken($color-tertiary, 10%);
+  }
+
+}
+
+.menu-outline {
+  background-color: initial;
+  border: 1px solid rgba(0, 0, 0, 0);
+
+  & li:hover,
+  & li.active {
+    background-color: initial;
+  }
+
+  & li:hover a,
+  & li.active a {
+    text-decoration: underline;
+  }
+
+}
+
+.menu-auto {
+  width: auto;
+}
+
+.menu-basic {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  & li a {
+    display: block;
+  }
+
+}
+
+.breadcrumbs {
+  width: 100%;
+  margin: 0 0 1em 0;
+  padding: 0;
+
+  & li,
+  & div {
+    display: inline;
+  }
+
+}
+
+.menu-vertical {
+  width: 100%;
+  display: block;
+  padding: 0;
+  background-color: #f8f8f8;
+  border: 1px solid $color-greyscale1;
+
+  & li {
+    display: block;
+    width:100%;
+
+    & a {
+      display: block;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      color: $color-text !important;
+      border-bottom: 1px solid $color-greyscale1;
+    }
+
+    &:hover,
+    &.active {
+      background: $color-greyscale1;
+    }
+
+    &:last-child a {
+      border-bottom: 0px;
+    }
+
+  }
+
+}
+
+.menu-vertical-primary {
+  background-color: $color-primary;
+
+  & li a {
+    color: #fff !important;
+  }
+
+  & li:hover,
+  & li.active {
+    background: darken($color-primary, 10%);
+  }
+
+}
+
+.menu-vertical-secondary {
+  background-color: $color-secondary;
+
+  & li a {
+    color: #fff !important;
+  }
+
+  & li:hover,
+  & li.active {
+    background: darken($color-secondary, 10%);
+  }
+
+}
+
+.menu-vertical-tertiary {
+  background-color: $color-tertiary;
+
+  & li a {
+    color: #fff !important;
+  }
+
+  & li:hover,
+  & li.active {
+    background: darken($color-tertiary, 10%);
+  }
+
+}
+
+.menu-vertical-auto {
+  width: auto;
+  display: inline-block;
+
+  & li {
+    width: auto;
+
+    &:hover,
+    &.active {
+      background: $color-greyscale1;
+    }
+
+  }
+
+}
+
+.pagination {
+  width: 100%;
+  padding: 0;
+
+  & li {
+    display: inline;
+
+    & a {
+      padding: 8px 16px;
+      text-decoration: none;
+      border: 1px solid $color-greyscale1;
+      color: $color-text !important;
+    }
+
+    &:hover a,
+    &.active a {
+      background-color: $color-greyscale1;
+      border: 1px solid $color-greyscale2;
+    }
+
+  }
+
+}
