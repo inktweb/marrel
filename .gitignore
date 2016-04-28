@@ -1,0 +1,13 @@
+# Config files
+.sftp-config
+.sql
+
+# Cache / Auto created files
+.scssc
+.sass-cache
+
+# OS / Editor
+.DS_Store
+dwsync.xml
+Thumbs.db
+LICENSE
