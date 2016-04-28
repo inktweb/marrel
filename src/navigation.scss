@@ -171,8 +171,23 @@
 
 .breadcrumbs {
   width: 100%;
-  margin: 0 0 1em 0;
+  margin: 0 0 .5em 0;
   padding: 0;
+  color: $color-greyscale2;
+
+  & a {
+    color: $color-greyscale3;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
+  & .active {
+    color: $color-greyscale3;
+    text-decoration: none;
+  }
 
   & li,
   & div {
