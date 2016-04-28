@@ -75,7 +75,7 @@ label {
 
 form .required {
   float: right;
-  color: red;
+  color: $color-error;
 }
 
 form .help {
@@ -84,9 +84,9 @@ form .help {
 }
 
 form .error {
-  border: 1px solid red;
+  border: 1px solid $color-error;
 }
 
 form .success {
-  border: 1px solid green;
+  border: 1px solid $color-success;
 }
