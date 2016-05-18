@@ -38,6 +38,20 @@
 
 }
 
+.btn-lg {
+  padding: 14px 48px;
+}
+
+.btn-sm {
+  padding: 9px 11px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 .btn-primary {
   background-color: $color-primary;
   color: #fff !important;
