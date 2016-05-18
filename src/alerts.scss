@@ -19,6 +19,15 @@
     margin: 0;
   }
 
+  & a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
 }
 
 .alert-primary {
