@@ -1,0 +1,65 @@
+/**
+ * Alerts
+ */
+.alert {
+  width: 100%;
+  padding: 8px 16px;
+  margin: 0 0 1em 0;
+  background-color: #f8f8f8;
+  border: 1px solid $color-greyscale1;
+
+  /* Reset margins inside .alert's */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  & a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
+}
+
+.alert-primary {
+  background-color: $color-primary;
+  color: #fff !important;
+
+  & a {
+    color: #fff !important;
+  }
+
+}
+
+.alert-secondary {
+  background-color: $color-secondary;
+  color: #fff !important;
+
+  & a {
+    color: #fff !important;
+  }
+
+}
+
+.alert-tertiary {
+  background-color: $color-tertiary;
+  color: #fff !important;
+
+  & a {
+    color: #fff !important;
+  }
+
+}
+
+.alert-outline {
+  background-color: rgba(0, 0, 0, 0);
+}

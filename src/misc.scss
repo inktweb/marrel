@@ -1,0 +1,33 @@
+/**
+ * Misc classes
+ */
+.price-big {
+  font-weight: bold;
+  font-size: 150%;
+  vertical-align: baseline;
+  color: $color-tertiary;
+}
+
+.price-small {
+  font-size: 90%;
+  vertical-align: baseline;
+  color: $color-greyscale3;
+}
+
+.price-muted {
+  position: relative;
+  display: inline-block;
+  color: $color-greyscale3;
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid;
+    border-color: inherit;
+    transform: rotate(-7deg);
+  }
+
+}

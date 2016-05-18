@@ -1,0 +1,25 @@
+/**
+ * Badges
+ */
+.badge {
+  display: inline-block;
+  padding: 1px 5px;
+  font-weight: bold;
+  font-size: inherit;
+  background-color: #FD0;
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: $color-primary;
+}
+
+.badge-secondary {
+  color: #fff;
+  background-color: $color-secondary;
+}
+
+.badge-tertiary {
+  color: #fff;
+  background-color: $color-tertiary;
+}

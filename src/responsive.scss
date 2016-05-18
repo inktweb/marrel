@@ -1,3 +1,6 @@
+/**
+ * Grid / Responsive
+ */
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -935,4 +938,16 @@
   .hidden-print {
     display: none !important;
   }
+}
+
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

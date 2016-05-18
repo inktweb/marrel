@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/src/marrel.min.css">
+</head>
+<body>
+
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3 col-xs-12">
+
+    <h1>default</h1>
+
+    <form>
+      <label for="search">Search</label>
+      <input class="field-light" id="search" type="text" placeholder="Search for product...">
+      <button class="btn">Go!</button>
+    </form>
+
+    <form>
+        <input type="text" value="1">
+        <input class="btn btn-primary" type="submit" value="Plaats in mandje">
+    </form>
+
+</div><!-- /col -->
+
+<div class="col-sm-6 col-sm-offset-3 col-xs-12">
+
+    <h1>form-full</h1>
+
+    <form class="form-full">
+      <label for="email">Email Address</label>
+      <input type="text" id="email">
+      <label for="password">Password</label>
+      <input type="password" id="password">
+      <label for="dropdown">Select</label>
+      <select id="dropdown">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+      </select>
+      <label for="msg">Message</label>
+      <textarea rows="3" id="msg"></textarea>
+      <input class="btn" type="submit" value="Sign in">
+    </form>
+
+</div><!-- /col -->
+
+<div class="col-sm-6 col-sm-offset-3 col-xs-12">
+
+    <h1>form-horizontal</h1>
+
+    <form class="form-horizontal">
+        <label class="col-sm-5">Postcode</label>
+        <div class="col-sm-7">
+            <input class="col-sm-5" type="text" placeholder="1234AB">
+        </div>
+
+        <label class="col-sm-5">Huisnummer + Toevoeging</label>
+        <div class="col-sm-7">
+            <input class="col-sm-3" type="text" placeholder="1">
+            <input class="col-sm-2" type="text" placeholder="B">
+        </div>
+
+        <label class="col-sm-5">Adres</label>
+        <div class="col-sm-7">
+            <input class="col-xs-12" type="text" placeholder="Straatnaam wordt automatic ingevuld" disabled>
+            <input class="col-xs-12" type="text" placeholder="Plaatsnaam wordt automatic ingevuld" disabled>
+        </div>
+
+        <label class="col-sm-5">Wilt u de BTW verleggen?</label>
+        <div class="col-sm-7">
+            <label class="col-sm-6"><input type="radio"> Ja</label>
+            <label class="col-sm-6"><input type="radio"> Nee</label>
+        </div>
+    </form>
+
+    <form class="form-horizontal">
+        <label class="col-sm-2" id="email">Email</label>
+        <div class="col-sm-10" id="email">
+            <input class="col-xs-12" type="email">
+        </div>
+        <label class="col-sm-2" id="password">Password</label>
+        <div class="col-sm-10" id="password">
+            <input class="col-xs-12" type="password">
+        </div>
+        <label class="col-sm-2" for="captcha">Captcha</label>
+        <div class="col-sm-10" id="captcha">
+            <textarea class="col-xs-12"></textarea>
+        </div>
+        <label class="col-sm-12" for="remember">
+           <input id="remember" type="checkbox" checked>
+            Remember me
+        </label>
+        <input class="btn btn-primary col-sm-4 col-sm-offset-8" type="submit" value="Login">
+    </form>
+
+    <form class="form-horizontal">
+        <label class="col-xs-4">First name</label>
+        <input class="col-xs-8 success" type="text" value="Jon Snow">
+        <label class="col-xs-4">Email</label>
+        <input class="col-xs-8 error" type="text" value="jonsnow!knowsnothing.com">
+        <label class="col-xs-4">Info</label>
+        <input class="col-xs-8 info" type="text" value="Jon Snow">
+        <label class="col-xs-4">warning</label>
+        <input class="col-xs-8 warning" type="text" value="Jon Snow">
+    </form>
+
+    <form class="form-horizontal">
+        <label class="col-xs-4">Email <span class="required">*<span></label>
+        <input class="col-xs-8" type="email">
+    </form>
+
+</div><!-- /col -->
+
+
+<div class="col-sm-6 col-sm-offset-3 col-xs-12">
+
+    <h1>btn-input</h1>
+
+    <div class="row">
+        <div class="col-xs-4 pull-right">
+            <!-- snippet starts here -->
+            <form class="form-horizontal">
+                <div class="col-xs-12">
+                    <input class="col-xs-3" type="text" value="1">
+                    <input class="btn btn-secondary btn-input col-xs-9" type="submit" value="Plaats in mandje">
+                </div>
+            </form>
+            <!-- snippet ends here -->
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-xs-4 pull-left">
+            <!-- snippet starts here -->
+            <form class="form-horizontal">
+                <div class="col-xs-12">
+                    <input class="btn btn-tertiary btn-input-left col-xs-9" type="submit" value="Plaats in mandje">
+                    <input class="col-xs-3" type="text" value="1">
+                </div>
+            </form>
+            <!-- snippet ends here -->
+        </div>
+    </div>
+
+
+</div><!-- /col -->
+</div><!-- /container -->
+
+
+</body>
+</html>

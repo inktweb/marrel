@@ -1,0 +1,121 @@
+/**
+ * Buttons
+ */
+.btn {
+  padding: 11px 16px;
+  display: inline-block;
+  text-decoration: none;
+  line-height: inherit !important;
+  color: $color-text !important;
+  border: 1px solid $color-greyscale1;
+  background-color: #f8f8f8;
+
+  &:hover,
+  &:active,
+  &:focus {
+    transition: 0.3s ease all;
+  }
+
+  &:hover {
+    /* darken border */
+    border: 1px solid $color-greyscale2;
+  }
+
+  &:active {
+    -webkit-box-shadow: inset 0 3px 5px $color-greyscale1;
+    -moz-box-shadow: inset 0 3px 5px $color-greyscale1;
+    box-shadow: inset 0 3px 5px $color-greyscale1;
+  }
+
+  & > object,
+  & > svg {
+    display: inline;
+    width: 1em;
+    height: 1em;
+    margin-right: .5em;
+    fill: $color-text; // only works on svg
+  }
+
+}
+
+.btn-lg {
+  padding: 14px 48px;
+}
+
+.btn-sm {
+  padding: 9px 11px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: $color-primary;
+  color: #fff !important;
+
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+
+  &:active {
+    -webkit-box-shadow: inset 0 3px 5px darken($color-primary, 10%);
+    -moz-box-shadow: inset 0 3px 5px darken($color-primary, 10%);
+    box-shadow: inset 0 3px 5px darken($color-primary, 10%);
+  }
+
+}
+
+.btn-secondary {
+  background-color: $color-secondary;
+  color: #fff !important;
+
+  &:hover {
+    background: darken($color-secondary, 10%);
+  }
+
+  &:active {
+    -webkit-box-shadow: inset 0 3px 5px darken($color-secondary, 10%);
+    -moz-box-shadow: inset 0 3px 5px darken($color-secondary, 10%);
+    box-shadow: inset 0 3px 5px darken($color-secondary, 10%);
+  }
+
+}
+
+.btn-tertiary {
+  background-color: $color-tertiary;
+  color: #fff !important;
+
+  &:hover {
+    background: darken($color-tertiary, 10%);
+  }
+
+  &:active {
+    -webkit-box-shadow: inset 0 3px 5px darken($color-tertiary, 10%);
+    -moz-box-shadow: inset 0 3px 5px darken($color-tertiary, 10%);
+    box-shadow: inset 0 3px 5px darken($color-tertiary, 10%);
+  }
+
+}
+
+.btn-outline {
+  color: $color-text !important;
+  border: 1px solid $color-greyscale1;
+  background-color: #fff;
+}
+
+.btn-disabled {
+  color: $color-greyscale3 !important;
+  text-decoration: line-through;
+}
+
+.btn-input,
+.btn-input-right {
+  margin-left: -2px;
+}
+
+.btn-input-left {
+  margin-right: -2px;
+}
