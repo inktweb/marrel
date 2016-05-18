@@ -5,6 +5,7 @@ table {
   width: 100%;
   border: 1px solid $color-greyscale1;
   border-collapse: collapse;
+  table-layout: fixed;
   margin: 0 0 1em 0;
 
   tr:hover {
