@@ -1,0 +1,31 @@
+/**
+ * Print styles
+ *
+ * responsive.scss contains more styles related to print like `visible-print` and `visible-print-block`
+ */
+ @media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+
+  // place link on page
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  // dont place if link is just a # or /
+  a[href^="#"]:after,
+  a[href^="/"]:after {
+     content: "";
+  }
+
+  .hide-print {
+    visibility: hidden;
+    display: none;
+  }
+
+ }
